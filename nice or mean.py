@@ -48,7 +48,7 @@ def nice_mean(nice,mean,name):
             stop = False
 
 
-            pick2=input('\nA stranger approaches you to ask you for money. Will you be nice \nor mean? (N/M) \n>>>: ').lower()
+        pick2=input('\nA stranger approaches you to ask you for money. Will you be nice \nor mean? (N/M) \n>>>: ').lower()
         if pick2 == 'n':
             print("\nThe stranger walks away smiling...")
             nice = (nice + 1)
@@ -59,7 +59,7 @@ def nice_mean(nice,mean,name):
             stop = False
 
 
-            pick3=input('\nA stranger approaches and ask you if you would \nlike what they are eating. Will you be nice \nor mean? (N/M) \n>>>: ').lower()
+        pick3=input('\nA stranger approaches and ask you if you would \nlike what they are eating. Will you be nice \nor mean? (N/M) \n>>>: ').lower()
         if pick3 == 'n':
             print("\nThe stranger give you a litle...")
             nice = (nice + 1)
@@ -68,6 +68,29 @@ def nice_mean(nice,mean,name):
             print("\nThe stranger glares at you \ndisappointed and storms off...")
             mean = (mean + 1)
             stop = False
+        
+
+        pick4 = input('\nYou are in a bus and an old lady ask for your seat. Will you be nice \nor mean? (N/M) \n>>>: ').lower()
+        if pick4 == 'n':
+            print("\nThe stranger give you a litle...")
+            nice = (nice + 1)
+            stop = False
+        if pick4 == 'm':
+            print("\nThe stranger glares at you \ndisappointed and storms off...")
+            mean = (mean + 1)
+            stop = False
+
+
+        pick5 = input('\nYou are walking to work and a man ask you \nwhat time is it.\nWill you be nice or mean? (N/M)\n>>>: ').lower()
+        if pick5 == 'n':
+            print("\nThe stranger give you a litle...")
+            nice = (nice + 1)
+            stop = False
+        if pick5 == 'm':
+            print("\nThe stranger glares at you \ndisappointed and storms off...")
+            mean = (mean + 1)
+            stop = False
+
         score(nice,mean,name) #passes the three variables to the score()
 
 
