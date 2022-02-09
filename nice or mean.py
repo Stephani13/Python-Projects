@@ -90,7 +90,7 @@ def nice_mean(nice,mean,name):
             print("\nThe stranger glares at you \ndisappointed and storms off...")
             mean = (mean + 1)
             stop = False
-
+        show_score(nice,mean,name)
         score(nice,mean,name) #passes the three variables to the score()
 
 
@@ -103,6 +103,7 @@ def show_score(nice,mean,name):
 def score(nice,mean,name):
     #score function is being passed the value stored within the 3 variables
     if nice > 2:
+        
         win(nice,mean,name)
     if mean > 2:
         lose(nice,mean,name)
