@@ -91,6 +91,7 @@ def nice_mean(nice,mean,name):
             mean = (mean + 1)
             stop = False
         show_score(nice,mean,name)
+        
         score(nice,mean,name) #passes the three variables to the score()
 
 
