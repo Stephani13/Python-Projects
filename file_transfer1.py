@@ -43,20 +43,20 @@ class Window(Frame):
         self.master.destroy()
 
     def directory1(self):
-        v = fd.askdirectory()
-        self.varEntry.set(v)
+        self.v = fd.askdirectory()
+        self.varEntry.set(self.v)
 
     def directory2(self):
-        v = fd.askdirectory()
-        self.varEntry1.set(v)
+        self.w = fd.askdirectory()
+        self.varEntry1.set(self.w)
 
     def submit(self):
         
         #set where the source of the files are
-        source = '{}'.format(self.varEntry)
+        source = self.v
 
         #set ddestination path
-        destination = '{}'.format(self.varEntry1)
+        destination = self.w
         files = os.listdir(source)
 
 
@@ -65,7 +65,7 @@ class Window(Frame):
             if limit > datetime.datetime.now():
                 
                 #we are saying move the files represented by 'i' to their new destination
-                shutil.copy(source+i, destination)
+                shutil.copy(source+ '\\' + i, destination)
                 
         
 
