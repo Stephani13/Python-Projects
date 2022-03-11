@@ -12,7 +12,7 @@ class Account(models.Model):
     #as the owner's name not the primary key
 
     def __str__(self):
-        self.first_name + ' ' + self.last_name
+        return self.first_name + ' ' + self.last_name
 
 TransactionTypes = [('Deposit','Deposit') , ('Withdrawal', 'Withdrawal')]
 
