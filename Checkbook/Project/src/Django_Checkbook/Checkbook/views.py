@@ -31,9 +31,9 @@ def balance(request, pk):
             current_total += t.amount
             table_contents.update({t: current_total})
         else:
-            curreent_total -= t.amount
+            current_total -= t.amount
             table_contents.update({t: current_total})
-    content = {'account': account, 'table_conents': table_contents, 'balance': current_total}
+    content = {'account': account, 'table_contents': table_contents, 'balance': current_total}
     return render(request , 'Checkbook/BalanceSheet.html' , content)
 
 
@@ -45,4 +45,4 @@ def transaction(request):
             form.save()
             return balance(request, pk)
     context = {'form': form}
-    return render(request, 'Checkbook/AddTransaction.html')
+    return render(request, 'Checkbook/AddTransaction.html',context)
